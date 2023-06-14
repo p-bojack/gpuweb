@@ -569,8 +569,8 @@ and disable WebGPU on drivers with known bugs that can't be worked around.
 
 ### Timing attacks ### {#security-timing}
 
-WebGPU is designed to later support multi-threaded use via Web Workers. As such, it is designed not to open
-the users to modern high-precision timing attacks. Some of the objects,
+WebGPU is designed to later support multi-threaded use via Web Workers. As such, it is designed to not
+expose users to modern high-precision timing attacks. Some of the objects,
 like {{GPUBuffer}} or {{GPUQueue}}, have shared state which can be simultaneously accessed.
 This allows race conditions to occur, similar to those of accessing a `SharedArrayBuffer`
 from multiple Web Workers, which makes the thread scheduling observable.
